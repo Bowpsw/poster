@@ -30,10 +30,9 @@ public class SecurityConfig {
             throws Exception {
         http.authorizeRequests(configurer -> {
             //configurer.anyRequest().authenticated();
-            configurer.antMatchers("/order/**").hasRole("MEMBER")
-                    .antMatchers("/create/**").hasRole("ADMIN")
-                    .antMatchers("/update/**").hasRole("ADMIN")
-                    .antMatchers("/delete/**").hasRole("ADMIN");
+            configurer.antMatchers("/create/**").hasRole("MANAGER")
+                    .antMatchers("/update/**").hasRole("MANAGER")
+                    .antMatchers("/delete/**").hasRole("MANAGER");
         });
         http.exceptionHandling(configurer -> {
             configurer.accessDeniedPage("/access-denied");
