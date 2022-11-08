@@ -1,7 +1,8 @@
 html, body{
     margin-left:15px; margin-right:15px;
     padding:0px;
-    font-family: "Agency FB";
+    font-family:Noto Serif Thai, serif;
+            /*Verdana, Arial, Helvetica, sans-serif;*/
 }
 
 table {
@@ -45,9 +46,3 @@ tr:nth-child(odd) {background: #BBBBBB}
     margin-bottom: 15px;
     background: #cccccc;
 }
-
-.navbar-brand{
-    margin: 30px;
-    padding: 30px;
-}
-
