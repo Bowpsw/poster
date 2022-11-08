@@ -40,11 +40,9 @@ public class Poster {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    @JoinTable(name = "poster_owner",
-            joinColumns = {@JoinColumn(name = "poster_id")},
-            inverseJoinColumns = {@JoinColumn(name = "owner_id")})
-    private List<Owner> owners;
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    private Owner owners;
 
     public void fill(Poster poster) {
         this.code = poster.getCode();
@@ -110,11 +108,11 @@ public class Poster {
         this.category = category;
     }
 
-    public List<Owner> getOwners() {
+    public Owner getOwners() {
         return owners;
     }
 
-    public void setOwners(List<Owner> owners) {
+    public void setOwners(Owner owners) {
         this.owners = owners;
     }
 }

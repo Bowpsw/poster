@@ -52,6 +52,18 @@
                         </form:select>
                         <form:errors path="category.code" cssClass="error"/>
                     </td>
+
+                </tr>
+                <tr>
+                    <td><label>เจ้าของสินค้า</label></td>
+                    <td>
+                        <form:select path="owners.code">
+                            <form:option value="" label="-- กรุณาเลือกรายการ --"/>
+                            <form:options items="${owner}" itemLabel="name"
+                                          itemValue="code"/>
+                        </form:select>
+                        <form:errors path="owners.code" cssClass="error"/>
+                    </td>
                 </tr>
                 <tr><td><label>รายละเอียด:</label></td>
                     <td><form:textarea path="description"
@@ -68,7 +80,7 @@
                                        window.location.href='${pageContext.request.contextPath}/poster/${poster.id}/delete'; return false; }"
                                class="cancel-button"
                         />
-                        <c:if test="${product.id > 0}">
+                        <c:if test="${poster.id > 0}">
                             <input type="button" value="แสดงเจ้าของรูป"
                                    onclick="window.location.href=
                                            '${pageContext.request.contextPath}/poster/${poster.id}/view-owners';

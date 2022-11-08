@@ -17,7 +17,7 @@ public class Owner {
     int id;
 
     @NotNull
-    @Pattern(regexp="^SH[0-9]{3}")
+    @Pattern(regexp="^ON[0-9]{3}")
     @Column(name = "code", length = 10, nullable = false, unique = true)
     private String code;
 
@@ -25,10 +25,10 @@ public class Owner {
     @Column(name = "name")
     private String name;
 
-    @Pattern(regexp="^0[1-9]{9}")
     @NotNull
+    @Pattern(regexp="^08||09||06[0-9]{8}")
     @Column(name = "phone")
-    private int phone;
+    private String phone;
 
 //    @NotNull
 //    @Column(name = "owner")
@@ -42,10 +42,6 @@ public class Owner {
 //    @NotNull
 //    @Column(name = "address")
 //    private String address;
-
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "poster_owner", joinColumns = {@JoinColumn(name = "owner_id")}, inverseJoinColumns = {@JoinColumn(name = "poster_id")})
-    private List<Poster> posters;
 
     public void fill(Owner owner) {
         this.code = owner.getCode();
@@ -81,14 +77,14 @@ public class Owner {
         this.code = code;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
-    //    public String getOwner() {
+
 //        return owner;
 //    }
 //
@@ -119,13 +115,5 @@ public class Owner {
 //    public void setAddress(String address) {
 //        this.address = address;
 //    }
-
-    public List<Poster> getPosters() {
-        return posters;
-    }
-
-    public void setPosters(List<Poster> posters) {
-        this.posters = posters;
-    }
 
 }

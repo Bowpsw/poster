@@ -47,6 +47,7 @@ public class PosterController {
     public String showFormForAdd(Model model) {
         model.addAttribute("title", "เพิ่ม" + title);
         model.addAttribute("categories", categoryService.getCategories());
+        model.addAttribute("owner", ownerService.getOwners());
         model.addAttribute("poster", new Poster());
         return "poster/poster-form";
     }
@@ -58,6 +59,7 @@ public class PosterController {
         if (bindingResult.hasErrors()) {
             model.addAttribute("title", "มีข้อผิดพลาดในการบนัทึก" + title);
             model.addAttribute("categories", categoryService.getCategories());
+            model.addAttribute("owner", ownerService.getOwners());
             return "poster/poster-form";
         } else {
             Poster dbPoster = posterService.getPoster(poster.getId());

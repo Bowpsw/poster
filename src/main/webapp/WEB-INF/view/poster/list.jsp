@@ -23,7 +23,7 @@
             <th>ชื่อสินค้า</th>
             <th>ขนาด</th>
             <th>ราคา</th>
-            <th>จํานวนเจ้าของรูป</th>
+            <th>เจ้าของรูป</th>
         </tr>
         </thead>
         <tbody>
@@ -37,7 +37,7 @@
                     <fmt:formatNumber type="number" pattern="###,###.00"
                                       value="${poster.price}"/>
                 </td>
-                <td class="center">${fn:length(poster.owners)}</td>
+                <td>${poster.owners.name}</td>
             </tr>
         </c:forEach>
         </tbody>

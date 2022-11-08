@@ -30,9 +30,10 @@ public class PosterServiceImpl implements PosterService {
     @Override
     @Transactional
     public void savePoster(Poster poster) {
-        Category category =
-                categoryDao.getCategoryByCode(poster.getCategory().getCode());
+        Category category = categoryDao.getCategoryByCode(poster.getCategory().getCode());
         poster.setCategory(category);
+        Owner owner = ownerDao.getOwnerByCode(poster.getOwners().getCode());
+        poster.setOwners(owner);
         posterDao.savePoster(poster);
     }
 
@@ -67,7 +68,6 @@ public class PosterServiceImpl implements PosterService {
     public void addOwnerToPoster(int posterId, int ownerId) {
         Owner owner = ownerDao.getOwner(ownerId);
         Poster poster = posterDao.getPoster(posterId);
-        poster.getOwners().add(owner);
         posterDao.savePoster(poster);
     }
     @Override
@@ -75,7 +75,6 @@ public class PosterServiceImpl implements PosterService {
     public void removeOwnerFromPoster(int posterId, int ownerId) {
         Owner owner = ownerDao.getOwner(ownerId);
         Poster poster = posterDao.getPoster(posterId);
-        poster.getOwners().remove(owner);
         posterDao.savePoster(poster);
     }
 

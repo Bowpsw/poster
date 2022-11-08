@@ -22,23 +22,15 @@
       <th>รหัสเจ้าของรูป</th>
       <th>ชื่อเจ้าของ</th>
       <th>เบอร์</th>
-<%--      <th>Latitude</th>--%>
-<%--      <th>Longitude</th>--%>
-      <th>จํานวนรูปภาพ</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="owner" items="${owner}">
+    <c:forEach var="owner" items="${owners}">
       <tr><td>
         <a href="${pageContext.request.contextPath}/owner/${owner.id}/update">
             ${owner.code}</a></td>
         <td>${owner.name}</td>
         <td>${owner.phone}</td>
-<%--        <td>${owner.owner}</td>--%>
-<%--        <td>${owner.latitude}</td>--%>
-<%--        <td>${owner.longitude}</td>--%>
-        <td class="center">${fn:length(owner.posters)}</td>
-
       </tr>
     </c:forEach>
     </tbody>

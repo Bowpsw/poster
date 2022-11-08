@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="categories")
 public class Category {
-    @Id
+    @   Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @GenericGenerator(name = "increment", strategy = "increment")
@@ -17,8 +17,7 @@ public class Category {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "amount", nullable = false)
-    private int amount;
+
 //    @Column(name = "description", columnDefinition="TEXT")
 //    private String description;
 
@@ -26,9 +25,7 @@ public class Category {
     public void fill(Category category) {
         this.code = category.getCode();
         this.name = category.getName();
-        this.amount= category.getAmount();
 //        this.description = category.getDescription()
-
     }
     public int getId() {
         return id;
@@ -54,13 +51,6 @@ public class Category {
         this.name = name;
     }
 
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
 
 //    public String getDescription() {
 //        return description;
