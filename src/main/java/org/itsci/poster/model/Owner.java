@@ -30,27 +30,12 @@ public class Owner {
     @Column(name = "phone")
     private String phone;
 
-//    @NotNull
-//    @Column(name = "owner")
-//    private String owner;
-//    @NotNull
-//    @Column(name = "latitude")
-//    private String latitude;
-//    @NotNull
-//    @Column(name = "longitude")
-//    private String longitude;
-//    @NotNull
-//    @Column(name = "address")
-//    private String address;
 
     public void fill(Owner owner) {
         this.code = owner.getCode();
         this.name = owner.getName();
         this.phone = owner.getPhone();
-//        this.owner = owner.getOwner();
-//        this.latitude = owner.getLatitude();
-//        this.longitude = owner.getLongitude();
-//        this.address = owner.getAddress();
+
     }
 
     public int getId() {
@@ -85,35 +70,5 @@ public class Owner {
         this.phone = phone;
     }
 
-//        return owner;
-//    }
-//
-//    public void setOwner(String owner) {
-//        this.owner = owner;
-//    }
-//
-//    public String getLatitude() {
-//        return latitude;
-//    }
-//
-//    public void setLatitude(String latitude) {
-//        this.latitude = latitude;
-//    }
-
-//    public String getLongitude() {
-//        return longitude;
-//    }
-//
-//    public void setLongitude(String longitude) {
-//        this.longitude = longitude;
-//    }
-//
-//    public String getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(String address) {
-//        this.address = address;
-//    }
 
 }

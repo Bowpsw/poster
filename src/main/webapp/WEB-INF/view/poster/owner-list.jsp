@@ -4,6 +4,9 @@
 <html>
 <head>
   <title>${title}</title>
+  <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <link href="${pageContext.request.contextPath}/assets/css/style.css"
         rel="stylesheet">
 </head>
@@ -25,7 +28,6 @@
           <td class="center"><a href="${pageContext.request.contextPath}/owner/${owner.id}/update">${owner.code}</a></td>
           <td>${owner.name}</td>
           <td>${owner.phone}</td>
-<%--          <td>${owner.owner}</td>--%>
           <td class="center">
             <button type="submit" name="owner" value="${owner.id}">
               เพิ่ม </button>

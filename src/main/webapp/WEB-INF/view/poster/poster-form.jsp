@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head><title>${title}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"/>
 </head>
 <body>
@@ -71,7 +72,6 @@
                         <form:errors path="description" cssClass="error"/>
                     </td>
                 </tr>
-
                 <tr><td><label></label></td>
                     <td>
                         <input type="submit" value="บันทึก" class="save"/>
@@ -80,14 +80,6 @@
                                        window.location.href='${pageContext.request.contextPath}/poster/${poster.id}/delete'; return false; }"
                                class="cancel-button"
                         />
-                        <c:if test="${poster.id > 0}">
-                            <input type="button" value="แสดงเจ้าของรูป"
-                                   onclick="window.location.href=
-                                           '${pageContext.request.contextPath}/poster/${poster.id}/view-owners';
-                                           return false;"
-                                   class="add-button"
-                            />
-                        </c:if>
                     </td>
                 </tr>
                 </tbody>

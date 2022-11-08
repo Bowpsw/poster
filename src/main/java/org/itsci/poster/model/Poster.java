@@ -17,7 +17,7 @@ public class Poster {
     int id;
 
     @NotNull
-    @Pattern(regexp = "^PD[0-9]{4}")
+    @Pattern(regexp = "^P[0-9]{4}")
     @Column(name = "code", length = 10, nullable = false, unique = true)
     private String code;
 
