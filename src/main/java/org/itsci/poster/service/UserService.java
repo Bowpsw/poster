@@ -1,7 +1,5 @@
 package org.itsci.poster.service;
 
-
-
 import org.itsci.poster.model.User;
 
 import java.util.List;
