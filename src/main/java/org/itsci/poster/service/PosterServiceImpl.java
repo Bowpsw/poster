@@ -1,7 +1,5 @@
 package org.itsci.poster.service;
 
-//import org.itsci.shop.dao.CategoryDao;
-
 import org.itsci.poster.dao.CategoryDao;
 import org.itsci.poster.dao.PosterDao;
 import org.itsci.poster.dao.OwnerDao;

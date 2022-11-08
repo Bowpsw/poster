@@ -24,18 +24,24 @@ public class Owner {
     @NotNull
     @Column(name = "name")
     private String name;
+
+    @Pattern(regexp="^0[1-9]{9}")
     @NotNull
-    @Column(name = "owner")
-    private String owner;
-    @NotNull
-    @Column(name = "latitude")
-    private String latitude;
-    @NotNull
-    @Column(name = "longitude")
-    private String longitude;
-    @NotNull
-    @Column(name = "address")
-    private String address;
+    @Column(name = "phone")
+    private int phone;
+
+//    @NotNull
+//    @Column(name = "owner")
+//    private String owner;
+//    @NotNull
+//    @Column(name = "latitude")
+//    private String latitude;
+//    @NotNull
+//    @Column(name = "longitude")
+//    private String longitude;
+//    @NotNull
+//    @Column(name = "address")
+//    private String address;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(name = "poster_owner", joinColumns = {@JoinColumn(name = "owner_id")}, inverseJoinColumns = {@JoinColumn(name = "poster_id")})
@@ -44,10 +50,11 @@ public class Owner {
     public void fill(Owner owner) {
         this.code = owner.getCode();
         this.name = owner.getName();
-        this.owner = owner.getOwner();
-        this.latitude = owner.getLatitude();
-        this.longitude = owner.getLongitude();
-        this.address = owner.getAddress();
+        this.phone = owner.getPhone();
+//        this.owner = owner.getOwner();
+//        this.latitude = owner.getLatitude();
+//        this.longitude = owner.getLongitude();
+//        this.address = owner.getAddress();
     }
 
     public int getId() {
@@ -74,37 +81,44 @@ public class Owner {
         this.code = code;
     }
 
-    public String getOwner() {
-        return owner;
+    public int getPhone() {
+        return phone;
     }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
+    //    public String getOwner() {
+//        return owner;
+//    }
+//
+//    public void setOwner(String owner) {
+//        this.owner = owner;
+//    }
+//
+//    public String getLatitude() {
+//        return latitude;
+//    }
+//
+//    public void setLatitude(String latitude) {
+//        this.latitude = latitude;
+//    }
 
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
+//    public String getLongitude() {
+//        return longitude;
+//    }
+//
+//    public void setLongitude(String longitude) {
+//        this.longitude = longitude;
+//    }
+//
+//    public String getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(String address) {
+//        this.address = address;
+//    }
 
     public List<Poster> getPosters() {
         return posters;

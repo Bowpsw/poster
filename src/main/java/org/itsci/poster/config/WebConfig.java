@@ -14,8 +14,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @ComponentScan(basePackages = "org.itsci.poster")
 public class WebConfig implements WebMvcConfigurer {
     @Bean
-    public ViewResolver viewResolver() {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+    public ViewResolver viewResolver(){
+        InternalResourceViewResolver viewResolver = new
+                InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/view/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;

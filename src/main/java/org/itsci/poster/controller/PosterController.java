@@ -79,7 +79,6 @@ public class PosterController {
         return "poster/poster-form";
     }
 
-
     @GetMapping("/{id}/delete")
     public String deletePoster(@PathVariable("id") int id) {
         posterService.deletePoster(id);
@@ -87,7 +86,7 @@ public class PosterController {
     }
 
     @GetMapping("/{id}/view-owners")
-    public String productViewShop(@PathVariable("id") int id, Model model) {
+    public String posterViewOwner(@PathVariable("id") int id, Model model) {
         Poster poster = posterService.getPoster(id);
         model.addAttribute("title", title + " - รายการร้านค้า");
         model.addAttribute("poster", poster);

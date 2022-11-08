@@ -1,9 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: takda
-  Date: 9/29/2022
-  Time: 11:21 AM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<footer>&copy Copyright Lesson09 Watcharin's Spring MVC.</footer>
+<link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"/>
+<footer>
+    Copyright © 2022 swari-poster-gallery.Inwshop.com All rights reserved.
+    Inspired by LnwShop.com
+</footer>

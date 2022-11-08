@@ -15,6 +15,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <junit.version>5.8.2</junit.version>
+
         <springframework.version>5.3.22</springframework.version>
         <springsecurity.version>5.7.3</springsecurity.version>
         <jstl.version>1.2.2</jstl.version>
@@ -25,6 +26,7 @@
         <hibernate.validator>6.2.4.Final</hibernate.validator>
         <mariadb.version>3.0.6</mariadb.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -44,32 +46,38 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-deploy-plugin</artifactId>
             <version>2.7</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.1</version>
             <type>maven-plugin</type>
         </dependency>
+
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.12.4</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-site-plugin</artifactId>
             <version>3.3</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-resources-plugin</artifactId>
             <version>2.6</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -85,7 +93,7 @@
             <artifactId>spring-orm</artifactId>
             <version>${springframework.version}</version>
         </dependency>
-        <!-- JSTL Dependency  -->
+        <!--JSTL Dependency -->
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
             <artifactId>javax.servlet.jsp.jstl-api</artifactId>
@@ -95,55 +103,50 @@
             <groupId>taglibs</groupId>
             <artifactId>standard</artifactId>
             <version>${tld.version}</version>
-        </dependency>
-        <!-- Hibernate Validator  -->
+        </dependency><!--Hibernate Validator -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate.validator}</version>
-        </dependency>
-        <!-- Hibernate-C3P0 Integration  -->
+        </dependency><!--Hibernate-C3P0 Integration -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-c3p0</artifactId>
             <version>${hibernate.version}</version>
-        </dependency>
-        <!-- c3p0  -->
+        </dependency><!--c3p0 -->
         <dependency>
             <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
             <version>${c3p0.version}</version>
-        </dependency>
-        <!-- Hibernate-core  -->
+        </dependency><!--Hibernate-core -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
-        </dependency>
-        <!-- mariadb-connector-java  -->
+        </dependency><!--mariadb-connector-java -->
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <version>${mariadb.version}</version>
         </dependency>
-        <!-- Spring Security  -->
+
+        <!--Spring Security -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
             <version>${springsecurity.version}</version>
-        </dependency>
-        <!-- Spring Security Config  -->
+        </dependency><!--Spring Security Config -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>${springsecurity.version}</version>
-        </dependency>
-        <!-- Spring Security JSTL  -->
+        </dependency><!--Spring Security JSTL -->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-taglibs</artifactId>
             <version>${springsecurity.version}</version>
         </dependency>
+
     </dependencies>
 
     <build>

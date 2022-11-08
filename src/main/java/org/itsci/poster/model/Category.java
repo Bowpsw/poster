@@ -16,13 +16,19 @@ public class Category {
     private String code;
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(name = "description", columnDefinition="TEXT")
-    private String description;
+
+    @Column(name = "amount", nullable = false)
+    private int amount;
+//    @Column(name = "description", columnDefinition="TEXT")
+//    private String description;
+
 
     public void fill(Category category) {
         this.code = category.getCode();
         this.name = category.getName();
-        this.description = category.getDescription();
+        this.amount= category.getAmount();
+//        this.description = category.getDescription()
+
     }
     public int getId() {
         return id;
@@ -48,12 +54,20 @@ public class Category {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
+
+//    public String getDescription() {
+//        return description;
+//    }
+//
+//    public void setDescription(String description) {
+//        this.description = description;
+//    }
 }
 

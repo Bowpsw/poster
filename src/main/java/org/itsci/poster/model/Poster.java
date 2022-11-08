@@ -12,12 +12,12 @@ import java.util.List;
 public class Poster {
     @Id
     @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @GenericGenerator(name = "increment", strategy = "increment")
     int id;
 
     @NotNull
-    @Pattern(regexp="^PD[0-9]{4}")
+    @Pattern(regexp = "^PD[0-9]{4}")
     @Column(name = "code", length = 10, nullable = false, unique = true)
     private String code;
 
@@ -26,9 +26,13 @@ public class Poster {
     private String name;
 
     @NotNull
+    @Column(name = "size")
+    private String size;
+
+    @NotNull
     @Column(name = "price")
     private double price;
-    @Column(name = "description", columnDefinition="TEXT")
+    @Column(name = "description", columnDefinition = "TEXT")
     private String description;
     // getter/setter
 
@@ -38,13 +42,14 @@ public class Poster {
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinTable(name = "poster_owner",
-            joinColumns= { @JoinColumn(name = "poster_id")},
-            inverseJoinColumns= { @JoinColumn(name = "owner_id")})
+            joinColumns = {@JoinColumn(name = "poster_id")},
+            inverseJoinColumns = {@JoinColumn(name = "owner_id")})
     private List<Owner> owners;
 
     public void fill(Poster poster) {
         this.code = poster.getCode();
         this.name = poster.getName();
+        this.size = poster.getSize();
         this.category = poster.getCategory();
         this.description = poster.getDescription();
     }
@@ -71,6 +76,14 @@ public class Poster {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public double getPrice() {
