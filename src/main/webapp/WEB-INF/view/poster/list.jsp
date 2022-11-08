@@ -6,6 +6,8 @@
 <head>
     <title>${title}</title>
     <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/assets/css/poster/joeblog.css" rel="stylesheet"/>
+    <link href="${pageContext.request.contextPath}/assets/css/poster/themify-icons.css" rel="stylesheet"/>
 </head>
 <body>
 <h1>${title}</h1>
@@ -28,6 +30,35 @@
         </thead>
         <tbody>
         <c:forEach var="poster" items="${posters}">
+        <center>
+            <table>
+            <div class="col-lg-6">
+                <div class="card text-center mb-5">
+                    <div class="card-header p-0">
+                        <div class="blog-media">
+                            <img class="log-fl" src="${pageContext.request.contextPath}/assets/img/${poster.code}.png"style="width:50% ">
+                        </div>
+                    </div>
+                    <div class="card-body px-0">
+                        <h5 class="card-title mb-2">${poster.name}</h5>
+                        <small class="small text-muted">January 19 2019
+                            <span class="px-2">-</span>
+                            <a href="#" class="text-muted">64 Comments</a>
+                        </small>
+                    </div>
+
+                    <div class="card-footer p-0 text-center">
+                        <a href="single-post.html" class="btn btn-outline-dark btn-sm">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+            </table>
+        </center>
+
+
+
+
+
             <tr><td>
                 <a href="${pageContext.request.contextPath}/poster/${poster.id}/update">
                         ${poster.code}</a></td>

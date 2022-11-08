@@ -3,15 +3,15 @@
 <head><title>หน้าหลัก</title>
     <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"/></head>
 <body>
-<h1>KBM POSTER GALLERY - หน้าหลัก</h1>
+<h1>KBM POSTER GALLERY</h1>
 <div class="container">
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
 </div>
 <div>
-    <h1>555555555555555555555555555555
-    555555555555555555555555555555555
-    555555555555555555555555</h1>
+    <img class="Lhome" src="${pageContext.request.contextPath}/assets/img/KBM%20(2).png"style="width:50% ">
 </div>
-<jsp:include page="/WEB-INF/view/layouts/footer.jsp"/>
+<center>
+<div><jsp:include  page="/WEB-INF/view/layouts/footer.jsp"/></div>
+    </center>
 </body>
 </html>
