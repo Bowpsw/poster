@@ -11,9 +11,11 @@
 <body>
 
 <div class="container">
-  <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
+  <center><a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="" width="200px" height="190px"></a>
+    <div > <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/></div>
+  </center>
   <center><h1>${title}</h1></center>
-  <center>  <input type="button" value="เพิ่มเจ้าของรูปภาพ " class="btn btn-secondary"
+  <center>  <input type="button" value="เพิ่มเจ้าของรูปภาพ " class="btn btn-outline-secondary"  type="button"
                    onclick="window.location.href='${pageContext.request.contextPath}/owner/create'; return false;"
   /></center>
   <br>

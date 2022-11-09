@@ -11,7 +11,9 @@
 <body>
 <div id="header"><h1>${title}</h1></div>
 <div class="container">
-    <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
+    <center><a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="" width="200px" height="190px"></a>
+        <div > <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/></div>
+    </center>
     <input type="button" value="เพิ่มเจ้าของรูปภาพ"
            onclick="window.location.href=
                    '${pageContext.request.contextPath}/poster/${poster.id}/owner/add';

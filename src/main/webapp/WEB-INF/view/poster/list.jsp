@@ -14,16 +14,18 @@
 <body>
 
 <div class="container">
-    <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
+    <center><a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="" width="200px" height="190px"></a>
+        <div > <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/></div>
+    </center>
+    <center><h1>${title}</h1></center>
     <security:authorize access="hasRole('OWNER')">
         <br><br>
 
-    </security:authorize>
-    <center><h1>${title}</h1></center>
-    <center>    <input type="button" value="เพิ่มสินค้า"
-                       onclick="window.location.href='${pageContext.request.contextPath}/poster/create'; return false;"
-                       class="add-button"
-    /></center>
+        <center>    <input type="button" value="เพิ่มสินค้า" class="btn btn-outline-secondary"
+                           onclick="window.location.href='${pageContext.request.contextPath}/poster/create'; return false;"
+        /></center>    </security:authorize>
+
+
 
 <%--        <thead>--%>
 <%--        <tr>--%>

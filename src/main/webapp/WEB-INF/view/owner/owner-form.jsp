@@ -9,7 +9,9 @@
     <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"/>
 </div>
 <div class="container">
-    <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
+    <center><a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="" width="200px" height="190px"></a>
+        <div > <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/></div>
+    </center>
       <center>
           <h1>${title}</h1>
           <div id="container">
@@ -38,26 +40,6 @@
                               <form:errors path="phone" cssClass="error"/>
                           </td>
                       </tr>
-                          <%--                <tr><td><label>เจ้าของร้าน :</label></td>--%>
-                          <%--                    <td><form:input path="owner" cssClass="number"/>--%>
-                          <%--                        <form:errors path="owner" cssClass="error"/>--%>
-                          <%--                    </td>--%>
-                          <%--                </tr>--%>
-                          <%--                <tr><td><label>Latitude :</label></td>--%>
-                          <%--                    <td><form:input path="latitude" cssClass="number"/>--%>
-                          <%--                        <form:errors path="latitude" cssClass="error"/>--%>
-                          <%--                    </td>--%>
-                          <%--                </tr>--%>
-                          <%--                <tr><td><label>Longitude :</label></td>--%>
-                          <%--                    <td><form:input path="longitude" cssClass="number"/>--%>
-                          <%--                        <form:errors path="longitude" cssClass="error"/>--%>
-                          <%--                    </td>--%>
-                          <%--                </tr>--%>
-                          <%--                <tr><td><label>Address :</label></td>--%>
-                          <%--                    <td><form:textarea path="address"  cols="50" rows="5"></form:textarea>--%>
-                          <%--                        <form:errors path="address" cssClass="error"/>--%>
-                          <%--                    </td>--%>
-                          <%--                </tr>--%>
                       <tr><td><label></label></td>
                           <td >
                               <input type="submit" value="บันทึก" class="save"/>

@@ -8,12 +8,16 @@
     <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"/>
 </head>
 <body>
-<div id="header"><h1>${title}</h1>
-</div>
+
 <div class="container">
-    <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
+    <center><a class="navbar-brand" href="#"><img src="${pageContext.request.contextPath}/assets/img/logo.png" alt="" width="200px" height="190px"></a>
+        <div > <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/></div>
+        <div id="header"><h1>${title}</h1>
+        </div>
+    </center>
+
     <div id="container">
-        <i>กรอกข้อมูลในฟอร์ม เครื่องหมายดอกจัน (*) หมายถึงห้ามว่าง</i><br><br>
+        <center><i>กรอกข้อมูลในฟอร์ม เครื่องหมายดอกจัน (*) หมายถึงห้ามว่าง</i><br><br>
         <form:form action="${pageContext.request.contextPath}/poster/save "
                    modelAttribute="poster" method="POST">
             <form:hidden path="id"/>
@@ -85,6 +89,7 @@
                 </tbody>
             </table>
         </form:form>
+        </center>
     </div>
 </div>
 <jsp:include page="/WEB-INF/view/layouts/footer.jsp"/>

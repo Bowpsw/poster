@@ -27,20 +27,20 @@
 
     /* Change the link color to #111 (black) on hover */
     li a:hover {
-        background-color: #7db53c;
+        background-color: #DCDCDC;
     }
     a{
         color: white;
     }
 </style>
 <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"/>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded-pill bg-success">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav" style="list-style-type: none;">
+            <ul class="navbar-nav rounded-pill bg-secondary" style="list-style-type: none;">
                 <li class="nav-item">
                     <a class="nav-link" href="${pageContext.request.contextPath}">หน้าหลัก</a></th>
                 </li>
